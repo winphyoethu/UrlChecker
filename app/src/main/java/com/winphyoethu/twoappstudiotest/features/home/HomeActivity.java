@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -186,13 +187,16 @@ public class HomeActivity extends AppCompatActivity implements ClickListener, Ac
                             } else if (homeState instanceof ShowError) {
                                 pbLoading.setVisibility(View.GONE);
 
-                                tvErrorMessage.setVisibility(View.VISIBLE);
-                                btnRetry.setVisibility(View.VISIBLE);
-
-                                tvErrorMessage.setText(((ShowError) homeState).getErrorMessage());
+                                if (urlAdapter.getItemCount() > 0) {
+                                    Toast.makeText(this, ((ShowError) homeState).getErrorMessage(), Toast.LENGTH_SHORT).show();
+                                } else {
+                                    tvErrorMessage.setVisibility(View.VISIBLE);
+                                    btnRetry.setVisibility(View.VISIBLE);
+                                    tvErrorMessage.setText(((ShowError) homeState).getErrorMessage());
+                                }
                             }
                         }, throwable -> {
-                            Log.i("FUCKSHIT :: ", throwable.getMessage() + " DICK");
+                            Log.i("HOMERROR :: ", throwable.getMessage());
                         })
         );
     }
