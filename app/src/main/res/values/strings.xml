@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">TwoAppStudioTest</string>
+
+    <string name="btn_retry">Retry</string>
+    <string name="et_website_hint">https://www.facebook.com</string>
+    <string name="fab_add_item_description">FAB Add Item</string>
+
+    <!-- menu -->
+    <string name="menu_delete">Delete</string>
+    <string name="menu_sort">Sort</string>
+
+</resources>
