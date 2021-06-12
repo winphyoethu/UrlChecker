@@ -37,7 +37,7 @@ public class HomeViewModel extends ViewModel {
 
     PublishSubject<HomeState> urlStateSubject = PublishSubject.create();
 
-    private final List<String> defaultUrlList = List.of("https://www.channelnewsasia.com", "https://sg.yahoo.com", "https://www.google.com", "https://www.youtube.com", "https://www.facebook.com", "https://www.espn.com", "https://www.twitch.tv", "https://www.sofascore.com", "https://www.flashscore.com", "https://www.channelnewsasia.com", "https://sg.yahoo.com", "https://www.google.com", "https://www.youtube.com", "https://www.facebook.com", "https://www.espn.com", "https://www.twitch.tv", "https://www.sofascore.com", "https://www.flashscore.com", "https://www.channelnewsasia.com", "https://sg.yahoo.com", "https://www.google.com", "https://www.youtube.com", "https://www.facebook.com", "https://www.espn.com", "https://www.twitch.tv", "https://www.sofascore.com", "https://www.flashscore.com");
+    private final List<String> defaultUrlList = List.of("https://www.channelnewsasia.com", "https://sg.yahoo.com", "https://www.google.com");
     private List<UrlModel> urlList = new ArrayList();
     private boolean isAscend = true;
 
